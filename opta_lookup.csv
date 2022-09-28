@@ -1,0 +1,95 @@
+Column Name,ID,Value,Opta Definition
+period_id,1,First half,
+period_id,2,Second Half,
+period_id,3,First period of extra time,
+period_id,4,Second period of extra time,
+period_id,5,Penalty shoot out,
+period_id,10,Half-time,
+period_id,14,Post-game,
+period_id,15,Pre-game,
+period_id,16,Pre-match,
+type_id,1,Pass,"Any pass attempted from one player to another — free kicks, corners, throw-ins, goal kicks, and goal assists."
+type_id,2,Offside pass,Attempted pass made to a player who is in an offside position.
+type_id,3,Take on,Attempted dribble past an opponent. Excludes when a player overruns the ball.
+type_id,4,Foul,A foul is committed resulting in a free kick.
+type_id,5,Out,Ball goes out of play for a throw-in or goal kick.
+type_id,6,Corner awarded,Ball goes out of play for a corner kick.
+type_id,7,Tackle,"Dispossesses an opponent of the ball. When outcome_id = 1, this means the tackle was won and possession was retained; when outcome_id = 0, this means the tackle was won but possession was not retained."
+type_id,8,Interception,When a player intercepts any pass event between opposition players and prevents the ball reaching its target. Not a clearance.
+type_id,9,Turnover,"Unforced error leading to a loss of possession. In recent seasons, this has been replaced with an unsuccessful ball touch event and overrun qualifier."
+type_id,10,Save,"Goalkeeper event, saving a shot on goal. Can also be an outfield player event with the blocked column = TRUE."
+type_id,11,Claim,"Goalkeeper event, catching a crossed ball."
+type_id,12,Clearance,Player under pressure hits ball clear of the defensive zone or/and out of play.
+type_id,13,Miss,Any shot on goal which goes wide or over the goal.
+type_id,14,Post,Whenever the ball hits the frame of the goal.
+type_id,15,Attempt Saved,Shot saved. This event is for the player who took the shot. Blocked shots represented with the blocked column = TRUE.
+type_id,16,Goal,All goals.
+type_id,17,Card,"Bookings. These will have a red, yellow, or second yellow qualifier, and sometimes an associated reason."
+type_id,18,Player off,Player is substituted off.
+type_id,19,Player on,Player comes on as a substitute.
+type_id,20,Player retired,Player is forced to leave the pitch due to injury and the team have no substitutions left.
+type_id,21,Player returns,Player comes back on the pitch.
+type_id,22,Player becomes goalkeeper,When an outfield player has to replace the goalkeeper.
+type_id,23,Goalkeeper becomes player,Goalkeeper becomes an outfield player.
+type_id,24,Condition change,Change in playing conditions.
+type_id,25,Official change,Referee or linesman is replaced.
+type_id,27,Start delay,Used when there is a stoppage in play such as a player injury.
+type_id,28,End delay,Used when the stoppage ends and play resumes.
+type_id,30,End,End of a match period.
+type_id,32,Start,Start of a match period.
+type_id,34,Team set up,"Team line up. The involved, player_position, jersey_number, team_formation, and team_player_formation will show line up and formation details. These are reshaped in the formations table."
+type_id,35,Player changed position,Player moved to a different position but the team formation remained the same.
+type_id,36,Player changed jersey number,Player is forced to change jersey number.
+type_id,37,Collection end,An event with event_id = 30 signals the end of a half. This signals end of the match and thus data collection.
+type_id,40,Formation change,Team alters its formation.
+type_id,41,Punch,"Goalkeeper event, ball is punched clear."
+type_id,42,Good skill,"A player shows a good piece of skill on the ball, such as a step over or turn on the ball."
+type_id,44,Aerial,Aerial duel — a 50/50 when the ball is in the air.
+type_id,45,Challenge,When a player fails to win the ball as an opponent successfully dribbles past them.
+type_id,47,Rescinded card,This can occur post-match if the referee rescinds a card he has awarded.
+type_id,49,Ball recovery,When a player takes possession of a loose ball.
+type_id,50,Dispossessed,Player is successfully tackled and loses possession of the ball.
+type_id,51,Error,"Mistake by player losing the ball. Leads to a shot or goal, as denoted by leading_to_attempt = TRUE or leading_to_goal = TRUE, respectively."
+type_id,52,Keeper pick-up,"Goalkeeper event, picks up the ball."
+type_id,53,Cross not claimed,"Goalkeeper event, cross not successfully caught."
+type_id,54,Smother,"Goalkeeper event, comes out and covers the ball in the box winning possession."
+type_id,55,Offside provoked,Awarded to last defender when an offside decision is given against an attacker.
+type_id,56,Shield ball opp,Defender uses his body to shield the ball from an opponent as it rolls out of play.
+type_id,57,Foul throw-in,"A throw-in not taken correctly, resulting in another throw-in awarded to the opposing team."
+type_id,58,Penalty faced,"Goalkeeper event, penalty by opposition."
+type_id,59,Keeper sweeper,When keeper comes off his line and/or out of his box to clear the ball.
+type_id,60,Chance missed,Used when a player does not actually make a shot on goal but was in a good position to score and only just missed receiving a pass.
+type_id,61,Ball touch,"Used when a player makes a bad touch on the ball and loses possession. When outcome_id = 1, this means the ball simply hit the player unintentionally; when outcome_id = 0, this means the player deliberately but unsuccessfully controlled the ball."
+type_id,64,Resume,Match resumes on a new date after being abandoned mid-game.
+type_id,65,Contentious referee decision,Any major talking point or error made by the referee. Decision will be assigned to the relevant team.
+type_id,68,Referee drop ball,Delay after referee stops play. This event is given to both teams on restart.
+type_id,70,Injury time announcement,Injury time awarded by referee.
+type_id,72,Caught offside,Denotes which attacking player was caught offside.
+type_id,74,Blocked pass,"Similar to an interception, but the defending player is already very close to the ball."
+type_id,75,Delayed start,Match start delayed.
+type_id,76,Early end,Match ended early.
+type_id,77,Player off pitch,Indicates that a player is now off the pitch.
+type_id,5000,Carry,"Derived using our g+ event-ordering methodology. Successful carries are included if their straight-line distance exceeds 5.5 yards. All unsuccessful carries (i.e., those with which possession is lost) are included."
+formation_id,2,4-4-2,
+formation_id,3,4-1-2-1-2,
+formation_id,4,4-3-3,
+formation_id,5,4-5-1,
+formation_id,6,4-4-1-1,
+formation_id,7,4-1-4-1,
+formation_id,8,4-2-3-1,
+formation_id,9,4-3-2-1,
+formation_id,10,5-3-2,
+formation_id,11,5-4-1,
+formation_id,12,3-5-2,
+formation_id,13,3-4-3,
+formation_id,15,4-2-2-2,
+formation_id,16,3-5-1-1,
+formation_id,17,3-4-2-1,
+formation_id,18,3-4-1-2,
+formation_id,19,3-1-4-2,
+formation_id,20,3-1-2-1-3,
+formation_id,21,4-1-3-2,
+formation_id,22,4-2-4-0,
+formation_id,23,4-3-1-2,
+formation_id,24,3-2-4-1,
+formation_id,25,3-3-3-1,
